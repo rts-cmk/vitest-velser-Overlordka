@@ -10,11 +10,11 @@ describe("processValues function", () => {
     expect(processValues(["a", "b"])).toEqual(["A", "B"])
   })
 
-  it("skal returnere 'N/A' for null og undefined", () => {
+  it("skal returnere N/A for null og undefined", () => {
     expect(processValues([null, undefined])).toEqual(["N/A", "N/A"])
   })
 
-  it("skal returnere værdien for andre typer (dække else)", () => {
+  it("skal returnere værdien for andre typer", () => {
     const obj = { x: 1 }
     const arr = [true, obj, [1,2]]
     expect(processValues(arr)).toEqual([true, obj, [1,2]])
